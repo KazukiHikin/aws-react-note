@@ -21,6 +21,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
         <input
           id="title"
           type="text"
+          placeholder="タイトルを記入"
           value={activeNote.title}
           onChange={(e) => onEditNote("title", e.target.value)}
         />
