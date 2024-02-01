@@ -1,58 +1,89 @@
-button{
-    background: none;
-    border: none;
-    color: rgb(0, 136, 255);
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    cursor:pointer;
+button {
+  background: none;
+  border: none;
+  color: rgb(0, 136, 255);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap; /* strong内のテキストが折り返されないようにする */
 }
 
-.app-sidebar{
-    width: 30%;
-    height: 100vh;
-    border-right: 1px solid #ddd;
+.app-sidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
 }
 
-.app-sidebar-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
 }
 
-.app-sidebar-header h1{
-    margin: 0;
+.app-sidebar-header h1 {
+  margin: 0;
 }
 
-.app-sidebar-notes{
-    height: calc(100vh - 78px);
-    overflow-y: scroll;
+.app-sidebar-notes {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
 }
 
-.app-sidebar-note{
-    padding: 25px;
-    cursor: pointer;
-    transition: all 0.3s;
+.app-sidebar-note {
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.sidebar-note-title{
-    display: flex;
-    justify-content: space-between
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
 }
 
-.app-sidebar-note p{
-    margin: 10px 0;
+.app-sidebar-note p {
+  margin: 10px 0;
 }
 
-.app-sidebar-note small{
-color: #999;
-
+.app-sidebar-note small {
+  color: #999;
 }
 
-.app-sidebar-note:hover{
-    background-color: #c9c9c9;
+.app-sidebar-note:hover {
+  background-color: #c9c9c9;
 }
 
-.app-sidebar-note.active{
-    background-color: #eae9e9;
+.app-sidebar-note.active {
+  background-color: #eae9e9;
+}
+
+@media (max-width: 600px) {
+  button {
+    font-size: 8px;
+    
+  }
+  .app-sidebar-header {
+    padding: 0 5px 10px 0;
+  }
+  .app-sidebar-header h1 {
+    font-size: 1rem;
+    
+  }
+  .app-sidebar-note {
+    padding: 0 5px 0 0;
+  }
+  .sidebar-note-title strong{
+     font-size: 8px;
+     max-height: calc(8px * 4);
+     overflow-y: hidden;
+  }
+
+  .app-sidebar-notes small{
+    font-size: 5px;
+  }
+  .app-sidebar-note p{
+    font-size: 6px;
+    max-height: calc(6px * 4);
+     overflow-y: hidden;
+  }
 }

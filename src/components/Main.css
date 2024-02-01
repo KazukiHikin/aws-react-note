@@ -34,21 +34,44 @@ textarea {
   background: rgba(0, 0, 0, 0.04);
 }
 
-.preview-title{
+.preview-title {
   padding: 25px 25px 0 25px;
   margin: 0;
 }
 
-.markdown-preview{
+.markdown-preview {
   padding: 0 25px 25px 25px;
   line-height: 2rem;
 }
 
-.no-active-note{
+.no-active-note {
   width: 70%;
   height: 100vh;
   line-height: 100vh;
   text-align: center;
   font-size: 2rem;
   color: #999;
+}
+
+@media (max-width: 600px) {
+  .app-main-note-edit textarea{
+    height: calc(50vh - 50px);
+  }
+  
+
+  .app-main-note-edit input {
+    height: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .app-main-note-edit textarea {
+    font-size: 10px;
+  }
+  .preview-title {
+    font-size: 1rem;
+  }
+  .markdown-preview {
+    font-size: 10px;
+    line-height: 1rem;
+  }
 }
